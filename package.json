@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/shaojintian/eControl/issues"
   },
-  "homepage": "https://github.com/shaojintian/eControl#readme"
+  "homepage": "https://github.com/shaojintian/eControl#readme",
+  "devDependencies": {
+    "timer.js": "^1.0.4"
+  }
 }
