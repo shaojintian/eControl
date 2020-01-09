@@ -1,24 +1,23 @@
-const {ipcRenderer} = require('electron')
+const { ipcRenderer } = require('electron')
 const Timer = require('timer.js')
 
 function startWork() {
 	let workTimer = new Timer({
-		ontick: (ms) => {
+		ontick: ms => {
 			updateTime(ms)
 		},
-		onend: ()=>{
-            notification()
-        }
+		onend: () => {
+			notification()
+		}
 	})
 
-	workTimer.start(10)
+	workTimer.start(1)
 }
 
 function updateTime(ms) {
-    let timerContainer = document.getElementById('timer-container')
-    let s = (ms / 1000).toFixed(0)
-    timerContainer.innerText = s
-
+	let timerContainer = document.getElementById('timer-container')
+	let s = (ms / 1000).toFixed(0)
+	timerContainer.innerText = s
 }
 
 async function notification() {
@@ -33,4 +32,3 @@ async function notification() {
 }
 // do startWork()
 startWork()
-
